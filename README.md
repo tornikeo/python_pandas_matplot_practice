@@ -4,7 +4,7 @@ Learning from the code:
 2/17/2022
 Habit tracker *
 
-While this little piece of code is nice, we need a bit more. Please, after each commit, update README.md file with a short description of what you added and what you learned (don't delete old ones, just add more, like a diary). This habit will most certainly make your life easier in the future.
+
 
 def isMonotonic(array):
 
