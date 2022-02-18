@@ -56,6 +56,4 @@ bestsellers['User Rating'].dtype      Simply use 'Look up' for whatever column n
 houses['price'].min()                 #similar to just above. Input the column to get the min for that one column
                                       #Will push these and more soon!
                                       
-
-  
       
