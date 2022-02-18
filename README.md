@@ -5,7 +5,7 @@ Learning from the code:
 Habit tracker *
 
 
-
+```python
 def isMonotonic(array):
 
   #start with edgecases
@@ -38,22 +38,24 @@ def isMonotonic(array):
      return difference > 0  
      
   #review breadthfirst and depth first. Still working on solution.
+  ```
   
   Building better pandas fundamentals. Am still working on this code and will push shortly.
-  
+  ```python
   names = ['sumlev', 'region', 'division', 'state', 'name', 'census2010pop', 'estimatebase2010', 'popestimate2010', 'popestimate2011', 'popestimate2012', 'popestimate2013', 'popestimate2014', 'popestimate2015', 'popestimate2016', 'popestimate2017', 'popestimate2018', 'popestimate2019', 'popestimate042020', 'popestimate2020']
   ### Learned that creating a list like this is an easy way to rename columns. I create a list of names, in lowercase, and then pass it into the names (columns) parameter. 
   ###When I take header=0 out, then it keeps the old header AND uses our header. Interesting.
 
 nst = pd.read_csv('/content/drive/MyDrive/Datasets/Independent_projects/DataAnalysisCourseMaterials.zip (Unzipped Files)/DataAnalysis/data/nst-est2020.csv', names=names, header=0)  #header = 0 tells it to ignore the header b/c we're providing our own with names. 
 nst.head()
+  ```
   
-  
-### Finally understand this:
+I Finally understand this:
+```python
 bestsellers['User Rating'].dtype      Simply use 'Look up' for whatever column name you choose and then use chaining!
                                       I used to find this so confusing!
                                       
 houses['price'].min()                 #similar to just above. Input the column to get the min for that one column
                                       #Will push these and more soon!
                                       
-      
+```
