@@ -84,26 +84,30 @@ What does std mean?
 What does the 25th percentile mean?      -The value at which 25% of the values lie below that value
 What does the 75th percentile mean?      -The value at which 75% of the values lie below that value and 25% above
                     
-
+```
 titanic.describe(include=['O'])          #the default only includes numeric
                                          #You can do 'all' to include all
                                          #or 'O' to include objects - here we're doing 'O' so...
                                          #it's telling up the most frequent names, gender, age...
                                          #age b/c age has '?' marks in the rows
                                          #you can also do include=['object']
-
+```
 When to use square bracket vs dot notations?
 use square bracket if the column name has a dot in it - titanic.home.dest gives us an error
                                                       - titanic['home.dest'] works
 also use [] if you want to select multiple columns
-
+```
 houses.sum(nuermic_only=True)    #b/c we don't want to sum columns like datetime
 
+houses.nlargest(5, ['price'])
+```
+```
 netflix.release_year.describe()
 
-houses.nlargest(5, ['price'])
+```
 
 How can you retrieve both the 'price' and 'bedrooms' columns from houses?
-
+```
 select_multiple_cols = houses[['price', 'bedrooms']]
 select_multiple_cols
+```
