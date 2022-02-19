@@ -59,3 +59,8 @@ houses['price'].min()                 #similar to just above. Input the column t
                                       #Will push these and more soon!
                                       
 ```
+
+```
+houses.sum(numeric_only=True)        #numeric only is useful so that we don't sum the dates, object...
+```
+
