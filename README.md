@@ -111,3 +111,19 @@ How can you retrieve both the 'price' and 'bedrooms' columns from houses?
 select_multiple_cols = houses[['price', 'bedrooms']]
 select_multiple_cols
 ```
+```
+houses[['price', 'bedrooms', 'bathrooms']].describe() #getting stats for these three columns
+
+house_size = ['bedrooms', 'bathrooms', 'sqft_living']          #might be easier to read way to do it 
+houses[house_size]  #still nested list
+```
+
+How can you use .value_counts() on multiple columns?
+```
+houses[['bedrooms', 'bathrooms']].value_counts()
+```
+
+What's the default for .plot(). - What does it compare the X with by default?... - the index (which might not be that useful).
+You can make the value_counts() the index with:
+```
+houses.bedrooms.value_counts().plot()
