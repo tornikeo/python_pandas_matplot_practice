@@ -62,5 +62,24 @@ houses['price'].min()                 #similar to just above. Input the column t
 
 ```
 houses.sum(numeric_only=True)        #numeric only is useful so that we don't sum the dates, object...
+
+titanic['survived'].sum()            #Tells us that 500 people survived (b/c 0=died and 1=survived                                          #here we're summing this one column
+titanic.shape                        #1309 (rows) people. 500 survived
 ```
+```
+houses['price].mean()                ####how to round to 2 decimal spaces in this case?
+```
+
+```
+titanic.describe().round(2)
+```
+What does std mean?
+                      -lower std means that the values are tighter together (closer to the average)
+                      -higher std means values are more spread out or dispersed
+
+What does the 25th percentile mean?      -The value at which 25% of the values lie below that value
+What does the 75th percentile mean?      -The value at which 75% of the values lie below that value and 25% above
+                    
+
+
 
