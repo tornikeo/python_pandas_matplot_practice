@@ -163,10 +163,42 @@ I learned that they are cool b/c they automatically include the value counts, so
 ```
 bestsellers['User Rating'].plot(kind='hist');         ###Very useful
 ```
+pandas uses 0, 1, 2 as the default index. You can change it to whatever makes the most sense, for example the date
 
+```
+btc = pd.read_csv('/content/drive/MyDrive/Datasets/Independent_projects/DataAnalysisCourseMaterials.zip (Unzipped Files)/DataAnalysis/data/coin_Bitcoin.csv')
+btc.head()   #there's a lot of repetive info here such as Bitcoin, BTC (they're all BTC).
 
+```
+Let's just focus on the name, date and high and low prices
+```
+btc['High'].plot() #b/c we reset the index, now the Date show up on the bottom instead of the range of                     0 to 2991
+```
 
+```
+countries.set_index('Country', inplace=True)  #Taking a quick look at the countries df, likely we'd                                                     want the country to be the index...not 0, 1, 2...
+countries                                       so we set_index to Country and save it
+```
+Notice how many spaces and funky characters there are in the column names such as: (per sq. mi.)
+if we were doing something serious with these, we're probably want to rename them to something simplier
 
+set index right in read_csv is the easiest way to do it
+```
+df = pd.read_csv('/content/drive/MyDrive/Datasets/Independent_projects/DataAnalysisCourseMaterials.zip (Unzipped Files)/DataAnalysis/data/world-happiness-report-2021.csv', index_col='Country name')
+df.head(3)
+```
 
+df['Ladder score']   #the general world happiness report score
+b/c we set the countries to the index, now it makes more sense (it's no longer just 1, 2, 3...with the score)
+```
+df.sort_values('Healthy life expectancy').head(3)  #goes from lowest to highest by default
+```
+I struggle a little bit to understand lambda. It makes better sense here
+```
+titanic.sort_values('name', key=lambda col: col.str.lower()) lambda is a function.
+                                                             Here we give it one parameter
+                                                             then we tell it what to do with that param
+```
 
+Start on .loc...Create a new Readme.
 
