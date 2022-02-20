@@ -127,3 +127,46 @@ What's the default for .plot(). - What does it compare the X with by default?...
 You can make the value_counts() the index with:
 ```
 houses.bedrooms.value_counts().plot()
+#A line chart is the default.
+
+How can we change the kind to make it more readable:
+```
+houses.bedrooms.value_counts().plot(kind='bar')     #We can easily change the kind=... This shows us                                                        that 2-4 bedrooms are the most common
+```
+titanic['survived'].value_counts().plot(kind='pie')   #each passanger is either 0 or 1
+                                                      #very interesting!
+```
+the above is for plotting in a Series
+In a dataframe you got to specify which data is for the X and which for the y! ###
+
+So for the houses dataset let's rename it df
+bedrooms vs bathrooms...which should we associate with x vs y
+In general, stuff like time and price go on y
+Here bed vs bath we'd prob want to put bedrooms on x b/c they range from 0-30 (higher std) than baths
+This usually works best b/c computer screens are wider than they are tall
+
+books_df.plot(x='Name', y='Price', kind='bar');   #put price or time on y whenever you to compare them.
+
+```
+netflix.rating.value_counts().head(8).plot(kind='bar)
+```
+```
+books_df.sort_values(by=['Price'], ascending=False)  ###the by= is very interesting
+```
+In plotting, what is barh and when might we use it?
+```
+bestsellers['Author'].value_counts().head(10).plot(kind='barh');   ###barh easier to reach in this case - h == horizontal
+```
+
+I didn't previously understand what the point of 'Histograms are' that well.
+I learned that they are cool b/c they automatically include the value counts, so no need to do .value_counts()
+```
+bestsellers['User Rating'].plot(kind='hist');         ###Very useful
+```
+
+
+
+
+
+
+
